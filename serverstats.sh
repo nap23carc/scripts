@@ -12,31 +12,24 @@
 #                                                #
 ##################################################
 
-#Ask for the name of the server. Will be used to generate a report with the servers name.
 echo What is the name of this server?
 
 read servername
 
-#Check OS version
-echo \n -----------------Operating System-----------------  
-echo hostnamectl > $servername-status-report.txt
-
-#Check memory
-echo \n -----------------Memory Status-----------------  
-echo free -h >> $servername-status-report.txt
-
-#Check mounted drives
-echo \n -----------------Mounted Devices-----------------  
-echo lsblk >> $servername-status-report.txt
-
-#Check newtork device status
-echo \n -----------------Network Status-----------------  
-echo nmcli >> $servername-status-report.txt
-
-#Check systemd status
-echo \n -----------------Systemd Status-----------------  
-echo systemctl status >> $servername-status-report.txt
-
-#List failed services
-echo \n -----------------Failed Services----------------- 
-echo systemctl failed >> $servername-status-report.txt
+{
+	echo -e "-----------------Operating System-----------------\n"
+	hostnamectl
+	echo -e "\n-----------------Memory Status-----------------\n"
+	free -h
+	echo -e "\n-----------------Mounted Devices-----------------\n"
+	lsblk
+	echo -e "\n-----------------Network Status-----------------\n"
+	nmcli
+	echo -e "\n-----------------Listening UDP/TCP Ports-----------------\n"
+	ss -ltu
+	echo -e "\n-----------------Systemd Status-----------------\n"
+	systemctl status
+	echo -e "\n-----------------Failed Services-----------------\n"
+	systemctl --failed
+	echo -e "\n-----------------End of Report-----------------"
+} > $servername-status-report.txt
