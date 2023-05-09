@@ -16,7 +16,7 @@ echo What is the name of this server?
 
 read servername
 
-d=$(date +%Y-%m-%d)
+d=$(date +%Y/%m/%d-%H:%M:%S)
 
 {
 	echo -e "-----------------Operating System-----------------\n"
