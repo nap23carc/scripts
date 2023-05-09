@@ -9,6 +9,8 @@
 #        Research Computing Facilitators         #
 #     Center for Advanced Research Computing     #
 #            University of New Mexico            #
+#                                                # 
+#      https://tinyurl.com/carcserverreport      #
 #                                                #
 ##################################################
 
