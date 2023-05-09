@@ -16,6 +16,8 @@ echo What is the name of this server?
 
 read servername
 
+d=$(date +%Y-%m-%d)
+
 {
 	echo -e "-----------------Operating System-----------------\n"
 	hostnamectl
@@ -32,4 +34,4 @@ read servername
 	echo -e "\n-----------------Failed Services-----------------\n"
 	systemctl --failed
 	echo -e "\n-----------------End of Report-----------------"
-} > $servername-status-report.txt
+} > $servername-status-report-$d.txt
