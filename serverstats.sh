@@ -1,17 +1,14 @@
 #!/bin/bash
 ##################################################
-#                                                #
 #              Server Status Report              #
 #                  v0.3 - 2023                   #
-#                                                #
 #        Nicholas Porter / Anneliese Ward        #
 #         nap23@unm.edu / anw0412@unm.edu        #
 #        Research Computing Facilitators         #
 #     Center for Advanced Research Computing     #
 #            University of New Mexico            #
-#                                                #
 ##################################################
-server$(hostname)
+server=$(hostname)
 date=$(date +%Y-%m-%d_%H-%M-%S)
 {
   echo -e "##### BEGINNING OF REPORT #####"
