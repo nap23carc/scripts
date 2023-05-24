@@ -20,4 +20,4 @@ date=$(date +%Y-%m-%d_%H-%M-%S)
   echo -e "\n----- Running Services -----\n"; systemctl --type=service --state=running
   echo -e "\n----- Failed Services -----\n"; systemctl --failed
   echo -e "\n##### END OF REPORT #####"
-} > $server-status-report-$date.txt 2> $server-status-errors-$date.txt 
+} > $server-status-report-$date.txt 2>&1
