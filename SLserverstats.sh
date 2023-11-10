@@ -1,4 +1,6 @@
-#################################################
+#!/bin/bash
+##################################################
+#     Scientific Linux Server Status Report      #
 #                  v0.5 - 2023                   #
 #        Nicholas Porter / Anneliese Ward        #
 #         nap23@unm.edu / anw0412@unm.edu        #
