@@ -8,8 +8,6 @@
 #     Center for Advanced Research Computing     #
 #            University of New Mexico            #
 ##################################################
-# This is a modification of serverstats.sh for older systems running Scientific Linux
-
 server=$(hostname)
 date=$(date +%Y-%m-%d_%H-%M)
 {
